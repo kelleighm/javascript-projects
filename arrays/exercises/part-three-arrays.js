@@ -7,6 +7,9 @@ cargoHold.splice(3,0,'keys');
 console.log(cargoHold); 
 //2) Remove ‘instruction manual’ from the array. (Hint: indexOf is helpful to avoid manually counting an index).
 console.log(cargoHold.indexOf('instruction manual'));
-cargoHold.spli 
+index = cargoHold.indexOf('instruction manual');
+cargoHold.splice(index, 1);
 console.log(cargoHold);
 //3) Replace the elements at indexes 2 - 4 with the items ‘cat’, ‘fob’, and ‘string cheese’.
+cargoHold.splice(2, 3, 'cat', 'fob', 'string cheese');
+console.log(cargoHold);
