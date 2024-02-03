@@ -26,7 +26,7 @@ console.log("Hold status: " + holdStatus(cargoHold));
 
 /* Steal some fuel from the shuttle:
  * /
- 
+
 //a). Define an anonymous function and set it equal to a variable with a normal, non-suspicious name. The function takes one parameter. This will be the fuel level on the shuttle.
 
 //b). You must siphon off fuel without alerting the TAs. Inside your function, you want to reduce the fuel level as much as possible WITHOUT changing the color returned by the checkFuel function.
@@ -55,3 +55,30 @@ console.log("Hold status: " + holdStatus(cargoHold));
 
 //c). Use a template literal to return, "Raided _____ kg of fuel from the tanks, and stole ____ and ____ from the cargo hold."
 
+let nonSuspiciousFunction = function(a) {
+}
+*/
+
+let nonSuspiciousFunction = function(a) {
+   if (checkFuel(a) === 'green') {
+      return a - 100001;
+   }
+   else if (checkFuel(a) === 'yellow') {
+      return a - 50001;
+   }
+   else {
+      return a;
+   }
+};
+
+let sneakyFunction = function(b) {
+  let stolenArr = cargoHold.splice(3, 2)
+  console.log(stolenArr); 
+  return  b;
+}
+
+
+let irs = function(levelOfFuel, itemsInCargo) {
+   let arr = deckMops(itemsInCargo);
+   return `Raided ${nonSuspiciousFunction(fuelLevel)} kg of fuel from the tanks, and stole ${arr[0]} and ${arr[1]} from the cargo hold.`
+}
