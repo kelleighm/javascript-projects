@@ -49,3 +49,39 @@ let arrayTest3 = ['hello', 'world', 123, 'orange'];
 // 3. Call your area function by passing in two arguments - the length and width.
 // 4. If only one argument is passed to the function, then the shape is a square. Modify your code to deal with this case.
 // 5. Use a template literal to print, “The area is ____ cm^2.”
+
+//PART ONE 
+// function reverseCharacters(str) {
+//     if (typeof str === 'string') { 
+//        reverseCharacters = str.split("").reverse().join("");
+//         return reverseCharacters
+// }   else { 
+//     (typeof str === 'number')
+//     toString(str);
+//     reverseCharacters = str.split("").reverse().join("");
+//     return reverseCharacters
+//     }
+// }
+
+// reverseCharacters(17)
+
+//We want to COMPLETELY reverse an array by flipping the order of the entries AND flipping the order of characters in each element.
+
+// Part One: Reverse Characters
+
+function reverseCharacters(str) {
+    let newstr = '';
+    if (typeof str === 'string'){
+    return str.split('').reverse().join('');
+} else if(typeof str === 'number'){
+    str = str.toString();
+    str.split('').reverse().join('');
+}
+return str.split('').reverse().join('');
+}
+console.log(reverseCharacters('Lance'))
+
+
+
+
+
